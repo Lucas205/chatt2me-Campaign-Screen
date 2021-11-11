@@ -1,0 +1,10 @@
+<template>
+    <div class="slds-p-top_xx-large">
+        <c-chatt2me-path steps={stages} selected-step={selectedStep} path-selected={pathSelected}></c-chatt2me-path>
+    </div>
+    <div class="slds-p-top_xx-large">
+        <template if:true={showComp}>
+            <c-chatt2me-campaign-comp onnext={nextHandler} onchanges={validation}></c-chatt2me-campaign-comp> 
+        </template>
+    </div>
+</template>

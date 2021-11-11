@@ -1,0 +1,11 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-horizontal_x-small">
+            <lightning-progress-indicator current-step={internalSelectedStep} type="path" variant="base">
+                <template for:each={steps} for:item="step">
+                    <lightning-progress-step key={step.value} label={step.label} value={step.value} onclick={pathSelected}></lightning-progress-step>    
+                </template>
+            </lightning-progress-indicator>
+        </div>
+    </lightning-card> 
+</template>
