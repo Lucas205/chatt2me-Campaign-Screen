@@ -1,0 +1,61 @@
+.main {
+  display: flex;
+}
+
+.card {
+  padding: 10px;
+  
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  bottom: 0;
+  position: absolute;
+  width: 48%;
+  
+}
+.nameFileUpload {
+    display: inline;
+    justify-content: flex-start;
+    height: 30px;
+    width: 50%;
+}
+
+.dropzone {
+  display: flex;
+  justify-content: center;
+}
+
+.dragAndDrop {
+  outline: 2px dashed #b7b7b7;
+  min-height: 40px;
+  height: 25vh;
+  line-height: 40px;
+  text-align: center;
+  font-size: 13px;
+  margin: 15px 2px 2px 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 202%;
+}
+
+.isDraging {
+  color: #004487;
+  background-color: #bcd1ff;
+}
+.sub-main {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+footer {
+  background-color:#ecebea;
+  margin-bottom: -12px ;
+}
+.margin {
+  margin-top: 8px ;
+}
+

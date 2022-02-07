@@ -1,0 +1,66 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-around_x-large">
+            <lightning-radio-group label=""
+                              options={sendingOptions}
+                              value={sendingValue}
+                              type="radio"
+                              onchange={handleRadioChange}>
+            </lightning-radio-group> 
+        </div>                       
+        <div class="slds-m-around_x-large">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_3-of-12">
+                    <lightning-input name="selectDate"
+                        type="date"
+                        label="Date"
+                        disabled={immediately}
+                        value={dateValue} 
+                        min={dateToday}
+                        onchange={handleComboboxChange}>
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_3-of-12">
+                    <lightning-combobox name="selectHour"
+                        label="Hour"
+                        placeholder="Select hour..."
+                        disabled={immediately}
+                        options={hourOptions}
+                        value={hourValue}
+                        onchange={handleComboboxChange}>
+                    </lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_3-of-12">
+                    <lightning-combobox name="selectMinute"
+                        label="Minute"
+                        placeholder="Select minute..."
+                        disabled={immediately}
+                        options={minuteOptions}
+                        value={minuteValue}
+                        onchange={handleComboboxChange}>
+                    </lightning-combobox>
+                </div>
+            </div>
+        </div>
+        <footer class="slds-card__footer">
+        <div slot="footer">
+            <div class="slds-text-align_right">
+                <span class="slds-p-right_x-small">
+                    <lightning-button class="slds-m-top_small slds" 
+                        type="submit" 
+                        label="Cancel">
+                    </lightning-button>
+                </span>
+                <span>
+                    <lightning-button class="slds-m-top_small"
+                        variant="brand" 
+                        type="submit" 
+                        label={nextAction}
+                        onclick={sendHandler}>
+                    </lightning-button>
+                </span>
+            </div>
+        </div>
+    </footer>
+    </lightning-card>    
+</template>

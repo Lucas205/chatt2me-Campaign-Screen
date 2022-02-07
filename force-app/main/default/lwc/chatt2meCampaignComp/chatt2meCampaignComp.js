@@ -8,7 +8,7 @@ export default class Chatt2meCampaignComp extends LightningElement {
     @track stepOfBot;
 
     nextHandler() {
-        this.dispatchEvent(new CustomEvent('next'));
+        this.dispatchEvent(new CustomEvent('next')); 
     }
     objectApiName = CAMPAIGN_OBJECT;  
 

@@ -1,0 +1,58 @@
+<template>
+    <!-- <div class="slds-p-bottom_xx-large">  -->    
+    <div class="slds-m-top_small">     
+    <lightning-card>
+        <div class="main">
+            <div class="sub-main">
+                <div class="card">
+                    <div>
+                        <!-- upload  -->
+                        <div class="widthDropzone">
+                            <div class="slds-form-element">
+                                <div class="slds-form-element__control">
+                                    <div class="slds-file-selector slds-file-selector_images">
+                                        <span>
+                                            <input type="text" value={fileNameUpload} name="nameFIle" class="nameFileUpload" readonly/>
+                                        </span>
+                                        <span class="slds-m-left_xx-small">
+                                            <lightning-button name="uploadFile" class="button-action-left"
+                                            label="Upload CSV File" onclick={onUploadButtonClick}
+                                            icon-name="utility:upload">
+                                            </lightning-button>
+                                            <div style="display:none">
+                                                <input type="file" accept=".csv" multiple="multiple"
+                                                    name="fileUpload" onchange={onInputUploadHandle}>
+                                            </div>
+                                        </span>
+                                        <div class={dragZoneCss} ondrop={dropHandler} ondragenter={dragEnterHandler}
+                                            ondragover={dragOverHandler} ondragleave={dragLeaveHandler}>
+                                            <label class="slds-file-selector__body" for="file-upload-input-01"
+                                                id="file-selector-secondary-label">
+
+                                                <span class="slds-file-selector__text slds-medium-show">Drag and Drop you file here</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="slds-card__footer">
+            <div class="slds-text-align_right">
+              <span class="slds-p-right_x-small">
+                <lightning-button class="slds-m-top_small slds" type="submit" label="Cancel"></lightning-button>     
+              </span>
+              <span>
+                <lightning-button class="slds-m-top_small" variant="brand" type="submit" label="Next" onclick={nextHandlertwo}></lightning-button>           
+              </span>
+            </div>
+        </footer>
+        
+    <!-- </div> -->
+    </lightning-card>
+    </div> 
+    
+</template>
