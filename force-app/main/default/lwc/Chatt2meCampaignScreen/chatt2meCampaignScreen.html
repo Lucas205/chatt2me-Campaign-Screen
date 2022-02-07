@@ -1,10 +1,25 @@
 <template>
-    <div class="slds-p-top_xx-large">
+    <div class="slds-p-top_small">
         <c-chatt2me-path steps={stages} selected-step={selectedStep} path-selected={pathSelected}></c-chatt2me-path>
     </div>
-    <div class="slds-p-top_xx-large">
+    <div class="slds-p-top_small">
         <template if:true={showComp}>
-            <c-chatt2me-campaign-comp onnext={nextHandler} onchanges={validation}></c-chatt2me-campaign-comp> 
+            <c-chatt2me-campaign-comp onnext={nextHandler} onchanges={valuesFieldComp}></c-chatt2me-campaign-comp> 
+        </template>
+    </div>
+    <div>
+        <template if:true={showUploadComp}>
+            <c-chatt2me-upload-comp onsendfile={fileSendUpload} onnexttwo={nextHandlertwo}></c-chatt2me-upload-comp>
+        </template>
+    </div>
+    <div>
+        <template if:true={showMessageComp}>
+            <c-chatt2me-message-comp colums={columcsv} templatefields={fieldsTemplate} oncomponentvalidation={valueColumnCSV} onnextthree={nextHandlerThree}></c-chatt2me-message-comp>
+        </template>
+    </div>
+    <div class="slds-p-top_small">
+        <template if:true={showSendComp}>
+            <c-chatt2me-send-comp onsendvalue={sendComp}></c-chatt2me-send-comp>
         </template>
     </div>
 </template>
